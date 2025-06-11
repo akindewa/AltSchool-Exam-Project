@@ -62,7 +62,7 @@
   }
   
   .problems h3 { color: #EF4444; } 
-  .solutions h3 { color: var(--primary); } /
+  .solutions h3 { color: var(--primary); } 
   
   ul {
     padding-left: 1.5rem;
