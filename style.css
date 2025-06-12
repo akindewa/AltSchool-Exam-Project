@@ -9,7 +9,7 @@
   
   body {
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    line-height: 1.9;
     color: var(--dark);
     background: var(--light);
     margin: 0;
@@ -41,16 +41,19 @@
   }
   
   .pitch-title {
-    font-size: 1.8rem;
-    color: var(--dark);
+    font-size: 1.6rem;
+    /* color: var(--dark); */
+    color: 2px solid  #6E56CF;
     margin-top: 2rem;
   }
   
   .pitch-text {
-    background: var(--secondary);
+    background: var(--light);
     padding: 1.5rem;
     border-radius: 12px;
     margin: 1.5rem 0;
+    color: 2px solid  #6E56CF;
+    line-height: 1.6rem;
   }
   
   .problems, .solutions {
