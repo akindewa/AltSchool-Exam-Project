@@ -21,7 +21,7 @@
 - HTTPS (Port 443)
 
 **Connecting via SSH:**
-- ** Navigate to the downloaded key pair location 
+-  Navigate to the downloaded key pair location 
 
 ```bash
 ssh -i "key.pem" ubuntu@ec2-34-255-207-159.eu-west-1.compute.amazonaws.com
