@@ -8,7 +8,12 @@
  - **Web Server:** Nginx
  - **Backend:** Node.js (for reverse proxy demo)
  - **Security:** Let’s Encrypt (Certbot), UFW firewall
- - **Domain:** `https://34.255.207.159.nip.io/` (temporary SSL domain for IP)
+ - **Domain:** 
+ 
+    ```bash
+     https://34.255.207.159.nip.io/
+     ``` 
+ (temporary SSL domain for IP)
 
  ##  Step-by-Step Implementation
  ### 1. Provisioning the Server (AWS EC2)
@@ -127,7 +132,7 @@ sudo ufw allow 443/tcp
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx -d 34-255-207-159.nip.io
 ```
-![certbot installation verification](./images/certbot.png)
+![certbot installation verification](/images/certbot.png)
 
 **Test Auto-Renewal:**
 
@@ -190,6 +195,11 @@ server.js               # Node.js app (runs on port 3000)
  
 - [Let’s Encrypt](https://letsencrypt.org) for free SSL certificates  
 - [AWS](https://aws.amazon.com) for cloud hosting
+
+## Hosted Page 
+
+- Public IP address : 34.255.207.159
+- Domain Name : https://34.255.207.159.nip.io/
 
 
 
