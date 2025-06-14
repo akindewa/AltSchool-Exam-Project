@@ -1,4 +1,4 @@
-# Cloud-Based Web Server Deployment | AltSchool Semester Project
+![nginx](https://github.com/user-attachments/assets/f51f88eb-dcd9-4bc1-83a8-a84a37b135d6)# Cloud-Based Web Server Deployment | AltSchool Semester Project
 ## Deploying a Secure Nginx Web Server with Node.js Proxy on AWS EC2
 ## Project Overview: 
  This project involved provisioning an AWS EC2 instance, setting up Nginx as a web server, creating a dynamic landing page, and configuring a reverse proxy for a Node.js application. The system was secured with Let’s Encrypt SSL (HTTPS) and tested for production readiness.
@@ -48,6 +48,11 @@ sudo systemctl enable nginx
 ```
 
 ![nginx installation verification](./images/nginx.png)
+![nginx](https://github.com/user-attachments/assets/9f63a21c-3e7b-4f8a-b9da-3dc2dc3bb176)
+
+
+
+
 
 **Verifying  Installation:**
 ```bash
