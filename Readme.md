@@ -41,12 +41,68 @@ sudo apt update && sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
+
+![nginx installation verification](./images/nginx.png)
+
 **Verifying  Installation:**
 ```bash
 curl http://localhost
 ```
-
 ---
+
+## 4. Reverse Proxy (Node.js)
+
+**Install Node.js:**
+
+```bash
+sudo apt install -y nodejs
+```
+
+![nodejs installation verification](./images/nodejs.png)
+
+**Create `server.js`:**
+
+```js
+// server.js
+const http = require('http');
+const server = http.createServer((req, res) => {
+  res.end('Hello from Node.js!');
+});
+server.listen(3000, 'localhost');
+```
+
+![nodejs installation verification](./images/server.js.png)
+
+**Nginx Reverse Proxy Config:**
+```nginx
+location /api {
+    proxy_pass http://localhost:3000;
+}
+```
+
+![reverseproxy verification](./images/reverseproxy.png)
+
+## 3. Dynamic Landing Page
+
+The landing page titled “QuickQueue” showcases a modern and responsive design aimed at presenting the core concept of the project. It introduces QuickQueue as a solution to reduce wait times and streamline customer service experiences across industries. The page includes:
+
+A concise project pitch highlighting the value proposition
+
+The role and responsibilities of the Lead Cloud Engineer 
+
+A brief professional bio, outlining  skills and cloud engineering journey
+
+Subtle UI animations and clean CSS styling to enhance user engagement
+
+The landing page is fully deployed on an Nginx web server and is accessible via domain (secured with SSL). It serves as the user-facing entry point of the project.
+
+
+
+
+
+
+
+
 
 
 
