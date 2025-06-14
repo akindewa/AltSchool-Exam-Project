@@ -138,7 +138,7 @@ sudo certbot renew --dry-run
 
 ---
 
-## ✅ Verification
+## Verification
 
 | Test                  | Command                             | Expected Output              |
 |-----------------------|--------------------------------------|------------------------------|
@@ -151,8 +151,45 @@ sudo certbot renew --dry-run
 
 ![link verification](./images/domainname.png)
 
+![curl verification](./images/curl.png)
+
 
 ---
+
+#  Challenges & Solutions
+
+| Issue                     | Solution                                           |
+|---------------------------|----------------------------------------------------|
+| EADDRINUSE (Port 3000)    | `sudo kill -9 $(sudo lsof -t -i:3000)`             |
+| Nginx 404 errors          | Fixed duplicate `location /` blocks                |
+| Certbot SSL failure       | Used [nip.io](https://nip.io) as a temporary domain |
+
+---
+
+##  Project Structure
+
+```text
+/var/www/html/
+├── index.html          # Landing page
+├── style.css           # Styles
+├── script.js           # Client-side logic
+server.js               # Node.js app (runs on port 3000)
+```
+
+---
+
+##  Lessons Learned
+
+- Always test redirects — HTTP to HTTPS can silently break things.
+- Certbot simplifies SSL, but domain validation is mandatory.
+- Reverse proxies require careful port management and Nginx configs.
+
+---
+
+##  Credits
+ 
+- [Let’s Encrypt](https://letsencrypt.org) for free SSL certificates  
+- [AWS](https://aws.amazon.com) for cloud hosting
 
 
 
