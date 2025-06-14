@@ -50,7 +50,7 @@ curl http://localhost
 ```
 ---
 
-## 4. Reverse Proxy (Node.js)
+## 3. Reverse Proxy (Node.js)
 
 **Install Node.js:**
 
@@ -82,7 +82,7 @@ location /api {
 
 ![reverseproxy verification](./images/reverseproxy.png)
 
-## 3. Dynamic Landing Page
+## 4. Dynamic Landing Page
 
 The landing page titled “QuickQueue” showcases a modern and responsive design aimed at presenting the core concept of the project. It introduces QuickQueue as a solution to reduce wait times and streamline customer service experiences across industries. The page includes:
 
@@ -95,6 +95,65 @@ A brief professional bio, outlining  skills and cloud engineering journey
 Subtle UI animations and clean CSS styling to enhance user engagement
 
 The landing page is fully deployed on an Nginx web server and is accessible via domain (secured with SSL). It serves as the user-facing entry point of the project.
+
+**Deploy Files to Web Root:**
+
+```bash
+sudo scp -r ~/local/project/* ubuntu@<IP>:/var/www/html/
+```
+
+![files to web root  verification](./images/webroot.png)
+
+**Set Correct Permissions:**
+
+```bash
+sudo chown -R www-data:www-data /var/www/html
+```
+
+---
+
+## 5. Networking & Security
+
+**Open Firewall Ports:**
+
+```bash
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+```
+
+**Install SSL (Let’s Encrypt Certbot):**
+
+```bash
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx -d 34-255-207-159.nip.io
+```
+![certbot installation verification](./images/certbot.png)
+
+**Test Auto-Renewal:**
+
+```bash
+sudo certbot renew --dry-run
+```
+![dru-run installation verification](./images/dry-run.png)
+
+---
+
+## ✅ Verification
+
+| Test                  | Command                             | Expected Output              |
+|-----------------------|--------------------------------------|------------------------------|
+| HTTP → HTTPS Redirect | `curl -I http://<IP>`                | 301 Moved Permanently        |
+| HTTPS Works           | `curl -I https://34.255.207.159.nip.io` | 200 OK                    |
+| Node.js Proxy         | `curl http://<IP>/api`               | Hello from Node.js!          |
+
+![http - https verification](./images/ipver.png)
+
+
+![link verification](./images/domainname.png)
+
+
+---
+
 
 
 
