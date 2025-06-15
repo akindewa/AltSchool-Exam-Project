@@ -42,13 +42,12 @@
   
   .pitch-title {
     font-size: 1.6rem;
-    /* color: var(--dark); */
-    color: 2px solid  #6E56CF;
+    color: var(--dark);
     margin-top: 2rem;
   }
   
   .pitch-text {
-    background: var(--light);
+    background: #bfbfbf;
     padding: 1.5rem;
     border-radius: 12px;
     margin: 1.5rem 0;
@@ -64,8 +63,8 @@
     margin: 1rem 0;
   }
   
-  .problems h3 { color: #EF4444; } 
-  .solutions h3 { color: var(--primary); } 
+  .problems h2 { color: #EF4444; } 
+  .solutions h2 { color: var(--primary); } 
   
   ul {
     padding-left: 1.5rem;
@@ -117,6 +116,7 @@
     padding: 0.5rem 1rem;
     border-radius: 8px;
     cursor: pointer;
+    transition: transparent 0.3s ease;
   }
   
 

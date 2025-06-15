@@ -137,7 +137,7 @@ sudo ufw allow 443/tcp
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx -d 34-255-207-159.nip.io
 ```
-![certbot installation verification](/images/certbot.png)
+![certbot installation verification](./images/certbot.png)
 
 **Test Auto-Renewal:**
 
