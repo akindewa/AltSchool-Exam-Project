@@ -190,7 +190,7 @@ server.js               # Node.js app (runs on port 3000)
 
 ##  Lessons Learned
 
-- Always test redirects — HTTP to HTTPS can silently break things.
+- Always test redirects : HTTP to HTTPS can silently break things.
 - Certbot simplifies SSL, but domain validation is mandatory.
 - Reverse proxies require careful port management and Nginx configs.
 
